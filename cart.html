@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - AVIS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <div class="logo">AVIS</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <div class="menu-icon">&#9776;</div>
+        </nav>
+    </header>
+
+    <!-- Cart Section -->
+    <section id="cart">
+        <h1>Your Cart</h1>
+        <div class="cart-container">
+            <!-- Cart Items -->
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Cart items will be dynamically injected here by JavaScript -->
+                </tbody>
+            </table>
+
+            <!-- Discount Code -->
+            <div class="discount-container">
+                <label for="discountCode">Have a discount code?</label>
+                <input type="text" id="discountCode" placeholder="Enter code">
+                <button id="applyDiscount">Apply</button>
+                <p id="discount-message"></p>
+            </div>
+
+            <!-- Save for Later -->
+            <div id="save-for-later-container">
+                <h2>Saved for Later</h2>
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Add Back to Cart</th>
+                        </tr>
+                    </thead>
+                    <tbody id="saved-items">
+                        <!-- Saved items will be injected here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Cart Summary -->
+            <div class="cart-summary">
+                <h2>Cart Summary</h2>
+                <p><strong>Total:</strong> $<span id="cart-total">0.00</span></p>
+                <p><strong>Estimated Delivery:</strong> <span id="delivery-date">N/A</span></p>
+                <button id="checkout-btn">Checkout</button>
+                <button id="continue-shopping">Continue Shopping</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 AVIS. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
